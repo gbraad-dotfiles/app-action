@@ -24,3 +24,6 @@ Use dotfiles' `apps`-command to install applications
 ```
 
 Have a look here for an [example workflows](https://github.com/gbraad-dotfiles/actions-test/blob/main/.github/workflows/test-devenv.yml).
+
+Application defintions can be found in [this repository](https://github.com/gbraad-dotfiles/applications/)
+.
