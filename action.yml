@@ -1,0 +1,35 @@
+name: "gbraad's Dotfiles `apps` Action"
+description: 'Wrapper for apps command execution on GitHub runners'
+author: "Gerard Braad <me@gbraad.nl>"
+inputs:
+  appname:
+    description: 'The application name'
+    required: true
+    default: ''
+  action:
+    description: 'Command to execute (instal, remove, run)'
+    required: false
+    default: 'install'
+  packager:
+    description: 'Optional packager or OS to use (fedora, dnf, brew, etc.)'
+    required: false
+    default: ''
+  args:
+    description: 'Optional arguments (-bg)'
+    required: false
+    default: ''
+runs:
+  using: 'composite'
+  steps:
+    - name: Execute apps command
+      uses: gbraad-actions/zsh-action@main
+      with:
+        run: |
+          # Check if apps function exists
+          if ! type apps >/dev/null 2>&1; then
+            echo "Error: apps function is not defined. Please make sure to run install first"
+            exit 1
+          fi
+          
+          # Execute apps command
+          apps ${{ inputs.appname }} ${{ inputs.action }} ${{ inputs.packager }} ${{ inputs.args }}
