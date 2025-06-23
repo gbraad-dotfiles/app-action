@@ -13,13 +13,13 @@ Use dotfiles' `apps`-command to install applications
         uses: gbraad-dotfiles/apps-action@main
         with:
           appname: brew
-          command: install
+          action: install
 
       - name: Install `mc` using brew
         uses: gbraad-dotfiles/apps-action@main
         with:
           appname: mc
-          command: install
+          action: install
           packager: brew
 ```
 
