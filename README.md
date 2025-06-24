@@ -23,7 +23,7 @@ Use dotfiles' `apps`-command to install applications
           packager: brew
 ```
 
-Have a look here for an [example workflows](https://github.com/gbraad-dotfiles/actions-test/blob/main/.github/workflows/test-devenv.yml).
+Have a look here for an [example workflows](https://github.com/gbraad-dotfiles/actions-test/blob/main/.github/workflows/test-apps.yml).
 
 Application defintions can be found in [this repository](https://github.com/gbraad-dotfiles/applications/)
 .
