@@ -18,12 +18,17 @@ inputs:
     description: 'Optional arguments (-bg)'
     required: false
     default: ''
+  as_user:
+    description: 'User to run the commands as (optional)'
+    required: false
+    default: ""
 runs:
   using: 'composite'
   steps:
     - name: Execute apps command
       uses: gbraad-actions/zsh-action@main
       with:
+        as_user: ${{ inputs.as_user }}
         run: |
           # Check if apps function exists
           if ! type apps >/dev/null 2>&1; then
