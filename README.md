@@ -1,7 +1,7 @@
 gbraad's Dotfiles `apps` action
 ===============================
 
-Use dotfiles' `apps`-command to install applications
+Runs `app` from my dotfiles to install applications according to the [application defintions](https://github.com/gbraad-dotfiles/applications). These are Actionfiles specifically to handle application related tasks, like installation, service install, desktop export, etc.
 
 ### Usage
 
@@ -19,8 +19,7 @@ Use dotfiles' `apps`-command to install applications
         uses: gbraad-dotfiles/apps-action@main
         with:
           appname: mc
-          action: install
-          packager: brew
+          action: install brew
 ```
 
 Have a look here for an [example workflows](https://github.com/gbraad-dotfiles/actions-test/blob/main/.github/workflows/test-apps.yml).

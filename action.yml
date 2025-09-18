@@ -7,15 +7,15 @@ inputs:
     required: true
     default: ''
   action:
-    description: 'Command to execute (instal, remove, run)'
+    description: 'Command to execute (instal, remove, run, etc. otherwise possible default)'
     required: false
     default: 'install'
-  packager:
+  context:
     description: 'Optional packager or OS to use (fedora, dnf, brew, etc.)'
     required: false
     default: ''
   args:
-    description: 'Optional arguments (-bg)'
+    description: 'Optional arguments (--background, --evaluate, etc.)'
     required: false
     default: ''
   as_user:
@@ -36,5 +36,5 @@ runs:
             exit 1
           fi
           
-          # Execute apps command
-          apps ${{ inputs.appname }} ${{ inputs.action }} ${{ inputs.packager }} ${{ inputs.args }}
+          # Execute app command
+          app ${{ inputs.appname }} ${{ inputs.action }} ${{ inputs.context }} ${{ inputs.args }}
