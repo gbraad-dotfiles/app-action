@@ -23,6 +23,3 @@ Runs `app` from my dotfiles to install applications according to the [applicatio
 ```
 
 Have a look here for an [example workflows](https://github.com/gbraad-dotfiles/actions-test/blob/main/.github/workflows/test-apps.yml).
-
-Application defintions can be found in [this repository](https://github.com/gbraad-dotfiles/applications/)
-.
