@@ -1,5 +1,5 @@
-name: "gbraad's Dotfiles `apps` Action"
-description: 'Wrapper for apps command execution on GitHub runners'
+name: "gbraad's Dotfiles `app` Action"
+description: 'Wrapper for app command execution on GitHub runners'
 author: "Gerard Braad <me@gbraad.nl>"
 inputs:
   appname:
@@ -25,14 +25,14 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - name: Execute apps command
+    - name: Execute app command
       uses: gbraad-actions/zsh-action@main
       with:
         as_user: ${{ inputs.as_user }}
         run: |
-          # Check if apps function exists
-          if ! type apps >/dev/null 2>&1; then
-            echo "Error: apps function is not defined. Please make sure to run install first"
+          # Check if app function exists
+          if ! type app >/dev/null 2>&1; then
+            echo "Error: app function is not defined. Please make sure to run install first"
             exit 1
           fi
           

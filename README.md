@@ -1,5 +1,5 @@
-gbraad's Dotfiles `apps` action
-===============================
+gbraad's Dotfiles `app` action
+==============================
 
 Runs `app` from my dotfiles to install applications according to the [application defintions](https://github.com/gbraad-dotfiles/applications). These are Actionfiles specifically to handle application related tasks, like installation, service install, desktop export, etc.
 
@@ -10,13 +10,13 @@ Runs `app` from my dotfiles to install applications according to the [applicatio
         uses: gbraad-dotfiles/install-action@main
         
       - name: Install brew
-        uses: gbraad-dotfiles/apps-action@main
+        uses: gbraad-dotfiles/app-action@main
         with:
           appname: brew
           action: install
 
       - name: Install `mc` using brew
-        uses: gbraad-dotfiles/apps-action@main
+        uses: gbraad-dotfiles/app-action@main
         with:
           appname: mc
           action: install brew
